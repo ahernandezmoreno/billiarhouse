@@ -10,21 +10,10 @@ const createWindow = () => {
     }
   })
 
-  win.loadFile('index.html')
-}
+createRoot(document.getElementById('root')!).render(
+  // making rollbackk
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
 
-app.whenReady().then(() => {
-  createWindow()
-
-  app.on('activate', () => {
-    if (BrowserWindow.getAllWindows().length === 0) {
-      createWindow()
-    }
-  })
-})
-
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit()
-  }
-})
