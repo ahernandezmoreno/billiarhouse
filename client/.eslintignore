@@ -1,0 +1,13 @@
+# Compilados
+dist/
+build/
+coverage/
+node_modules/
+
+# Archivos de entorno o configuración
+*.config.js
+*.config.ts
+vite.config.ts
+
+# Assets
+public/
